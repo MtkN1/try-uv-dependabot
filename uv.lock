@@ -4,7 +4,7 @@ requires-python = ">=3.13"
 
 [[package]]
 name = "botocore"
-version = "1.37.11"
+version = "1.37.12"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jmespath" },
