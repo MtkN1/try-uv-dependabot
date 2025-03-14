@@ -1,0 +1,13 @@
+name: CI
+on:
+  push: { branches: [main] }
+  pull_request: null
+  workflow_dispatch: null
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - run: uv run pytest ./test_botocore.py
